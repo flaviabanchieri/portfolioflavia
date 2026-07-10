@@ -27,17 +27,9 @@ const { title, description } = Astro.props;
 		</div>
 
 		<script>
-			const setAllLinksToNewTab = () => {
-				document.querySelectorAll('a[href]').forEach((link) => {
-					link.setAttribute('target', '_blank');
-					link.setAttribute('rel', 'noopener noreferrer');
-				});
-			};
-
-			// Add "loaded" class and force all links to open in a new tab.
+			// Add "loaded" class once the document has completely loaded.
 			addEventListener('load', () => {
 				document.documentElement.classList.add('loaded');
-				setAllLinksToNewTab();
 			});
 		</script>
 
