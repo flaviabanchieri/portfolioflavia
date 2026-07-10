@@ -15,7 +15,7 @@ interface Props {
 const { title, description } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="pt-BR">
 	<head>
 		<MainHead title={title} description={description} />
 	</head>
@@ -27,8 +27,18 @@ const { title, description } = Astro.props;
 		</div>
 
 		<script>
-			// Add “loaded” class once the document has completely loaded.
-			addEventListener('load', () => document.documentElement.classList.add('loaded'));
+			const setAllLinksToNewTab = () => {
+				document.querySelectorAll('a[href]').forEach((link) => {
+					link.setAttribute('target', '_blank');
+					link.setAttribute('rel', 'noopener noreferrer');
+				});
+			};
+
+			// Add "loaded" class and force all links to open in a new tab.
+			addEventListener('load', () => {
+				document.documentElement.classList.add('loaded');
+				setAllLinksToNewTab();
+			});
 		</script>
 
 		<style>

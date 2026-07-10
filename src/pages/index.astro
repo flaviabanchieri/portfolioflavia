@@ -27,19 +27,19 @@ const projects = (await getCollection('work'))
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Hello, my name is Jeanine White"
-					tagline="I am a Creative Developer who is currently based in Portland, Oregon."
+					title="Flavia Banchieri Roca"
+					tagline="Desenvolvedora de Software Pleno especializada em .NET, Angular, APIs REST e sistemas corporativos."
 					align="start"
 				>
 					<div class="roles">
-						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="microphone-stage" size="1.33em" /> Speaker</Pill>
-						<Pill><Icon icon="pencil-line" size="1.33em" /> Writer</Pill>
+						<Pill><Icon icon="code" size="1.33em" /> .NET</Pill>
+						<Pill><Icon icon="strategy" size="1.33em" /> Angular</Pill>
+						<Pill><Icon icon="terminal-window" size="1.33em" /> APIs REST</Pill>
 					</div>
 				</Hero>
 
 				<img
-					alt="Jeanine White smiling in a red plaid shirt and tortoise shell glasses"
+					alt="Retrato profissional de Flavia Banchieri Roca"
 					width="480"
 					height="620"
 					src="/assets/portrait.jpg"
@@ -52,8 +52,8 @@ const projects = (await getCollection('work'))
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Selected Work</h3>
-					<p>Take a look below at some of my featured work for clients from the past few years.</p>
+					<h3>Projetos em Destaque</h3>
+					<p>Confira alguns projetos e sistemas em que atuei nos últimos anos.</p>
 				</header>
 
 				<div class="gallery">
@@ -70,7 +70,7 @@ const projects = (await getCollection('work'))
 
 				<div class="cta">
 					<CallToAction href="/work/">
-						View All
+						Ver todos
 						<Icon icon="arrow-right" size="1.2em" />
 					</CallToAction>
 				</div>
@@ -78,19 +78,27 @@ const projects = (await getCollection('work'))
 
 			<section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Mentions</h3>
+					<h3>Diferenciais</h3>
 					<p>
-						I have been fortunate enough to receive praise for my work in several publications. Take
-						a look below to learn more.
+						Experiência consolidada em projetos de missão crítica e construção de software orientado à
+						qualidade.
 					</p>
 				</header>
 
 				<div class="gallery">
 					<Grid variant="small">
 						{
-							['Medium', 'BuzzFeed', 'The Next Web', 'awwwards.', 'TechCrunch'].map((brand) => (
+							[
+								'Sistemas de missão crítica para o Governo do Estado',
+								'Experiência nos setores público e privado',
+								'Desenvolvimento full stack com .NET e Angular',
+								'APIs REST escaláveis e seguras',
+								'Integração entre sistemas e bancos de dados',
+								'Arquitetura de software e engenharia de qualidade',
+								'Projetos em Educação, Saúde, Agronegócio, Varejo, Jurídico e Gestão Pública',
+							].map((item) => (
 								<li class="mention-card">
-									<p>{brand}</p>
+									<p>{item}</p>
 								</li>
 							))
 						}
